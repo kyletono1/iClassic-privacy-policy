@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="iClassic Digital 隐私政策 - 我们尊重并保护您的隐私">
+    <meta name="keywords" content="iClassic Digital, 隐私政策, Privacy Policy">
+    <title>隐私政策 - iClassic Digital</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #007AFF;
+            --background-dark: #1a1a1e;
+            --background-light: #2d2d32;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+            --text-tertiary: #808080;
+            --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a1e 0%, #2d2d32 100%);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent-gradient);
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .app-name {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            font-style: italic;
+        }
+
+        .language-selector {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .language-selector button {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            margin: 0 5px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .language-selector button:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+        }
+
+        .language-selector button.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: rgba(0, 122, 255, 0.1);
+            padding: 20px;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .highlight p {
+            margin-bottom: 8px;
+        }
+
+        .highlight p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 16px;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+
+        ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-tertiary);
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .content {
+                padding: 25px 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+
+        /* 隐藏非活动语言 */
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="app-icon">🎮</div>
+            <div class="app-name">iClassic Digital</div>
+            <h1 id="page-title">隐私政策</h1>
+            <p class="last-updated" id="last-updated">最后更新：2025年12月</p>
+        </header>
+
+        <div class="language-selector">
+            <button onclick="switchLanguage('zh')" class="active" id="btn-zh">简体中文</button>
+            <button onclick="switchLanguage('en')" id="btn-en">English</button>
+        </div>
+
+        <div class="content">
+            <!-- 中文版本 -->
+            <div id="content-zh" class="lang-content active">
+                <div class="section">
+                    <h2>简介</h2>
+                    <p>iClassic Digital 尊重您的隐私。本政策说明我们如何处理您的信息。我们致力于保护您的个人数据，确保实践的透明度。</p>
+                </div>
+
+                <div class="section">
+                    <h2>我们收集的信息</h2>
+                    <div class="highlight">
+                        <p><strong>核心承诺：</strong></p>
+                        <ul>
+                            <li>不收集任何个人信息</li>
+                            <li>所有数据本地存储</li>
+                            <li>不追踪使用情况</li>
+                            <li>照片不上传服务器</li>
+                        </ul>
+                    </div>
+                    <p>iClassic Digital 不收集任何个人信息。所有应用偏好设置和解锁状态均存储在您的设备本地。我们不会追踪您的使用情况或收集分析数据。您处理的照片保留在您的设备上，绝不会上传到我们的服务器。</p>
+                </div>
+
+                <div class="section">
+                    <h2>我们如何使用信息</h2>
+                    <p>由于我们不收集任何个人信息，因此没有数据使用需要报告。您的收藏进度和偏好设置仅存在于您的设备上，以增强您的应用体验。</p>
+                </div>
+
+                <div class="section">
+                    <h2>数据存储</h2>
+                    <p>所有应用数据使用 iOS UserDefaults 和本地存储保存在您的设备本地。这包括您的解锁进度、偏好设置和设置。数据不会传输到外部服务器或云服务。</p>
+                </div>
+
+                <div class="section">
+                    <h2>第三方服务</h2>
+                    <div class="highlight">
+                        <p><strong>完全独立运行：</strong></p>
+                        <ul>
+                            <li>无第三方分析服务</li>
+                            <li>无广告服务</li>
+                            <li>无跟踪服务</li>
+                            <li>完全离线运行</li>
+                        </ul>
+                    </div>
+                    <p>iClassic Digital 不集成任何第三方分析、广告或跟踪服务。该应用完全离线运行，核心功能无需网络访问。</p>
+                </div>
+
+                <div class="section">
+                    <h2>您的权利</h2>
+                    <p>您完全控制您的数据。由于所有数据都存储在本地，您可以随时通过卸载应用或在 iOS 设置中重置应用数据来删除它。我们无法访问您的任何信息。</p>
+                </div>
+
+                <div class="section">
+                    <h2>儿童隐私</h2>
+                    <p>我们的应用适合所有年龄段。由于我们不从任何人那里收集个人信息，因此我们不会故意收集13岁以下儿童的信息。家长可以放心让孩子使用此应用。</p>
+                </div>
+
+                <div class="section">
+                    <h2>政策变更</h2>
+                    <p>我们可能会不时更新此隐私政策。任何更改都将反映在应用更新中。我们将通过 App Store 更新说明通知用户重大更改。</p>
+                </div>
+
+                <div class="section">
+                    <h2>联系我们</h2>
+                    <p>如果您对本隐私政策或我们的做法有任何疑问，请随时通过 App Store 评论区或电子邮件与我们联系。我们重视您的反馈和关注。</p>
+                </div>
+            </div>
+
+            <!-- 英文版本 -->
+            <div id="content-en" class="lang-content">
+                <div class="section">
+                    <h2>Introduction</h2>
+                    <p>iClassic Digital respects your privacy. This policy explains how we handle your information. We are committed to protecting your personal data and ensuring transparency in our practices.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Information We Collect</h2>
+                    <div class="highlight">
+                        <p><strong>Core Commitment:</strong></p>
+                        <ul>
+                            <li>We do not collect any personal information</li>
+                            <li>All data is stored locally</li>
+                            <li>No usage tracking</li>
+                            <li>Photos never uploaded to servers</li>
+                        </ul>
+                    </div>
+                    <p>iClassic Digital does not collect any personal information. All app preferences and unlock statuses are stored locally on your device. We do not track your usage or collect analytics data. Photos you process remain on your device and are never uploaded to our servers.</p>
+                </div>
+
+                <div class="section">
+                    <h2>How We Use Information</h2>
+                    <p>Since we don't collect any personal information, there is no data usage to report. Your collection progress and preferences exist solely on your device to enhance your experience with the app.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Data Storage</h2>
+                    <p>All app data is stored locally on your device using iOS UserDefaults and local storage. This includes your unlock progress, preferences, and settings. No data is transmitted to external servers or cloud services.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Third-Party Services</h2>
+                    <div class="highlight">
+                        <p><strong>Completely Independent:</strong></p>
+                        <ul>
+                            <li>No third-party analytics</li>
+                            <li>No advertising services</li>
+                            <li>No tracking services</li>
+                            <li>Fully offline operation</li>
+                        </ul>
+                    </div>
+                    <p>iClassic Digital does not integrate any third-party analytics, advertising, or tracking services. The app functions entirely offline and does not require network access for core features.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Your Rights</h2>
+                    <p>You have complete control over your data. Since all data is stored locally, you can delete it at any time by uninstalling the app or resetting the app data in iOS Settings. We do not have access to any of your information.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Children's Privacy</h2>
+                    <p>Our app is suitable for all ages. We do not knowingly collect information from children under 13, as we don't collect any personal information from anyone. Parents can safely allow children to use this app.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Policy Changes</h2>
+                    <p>We may update this privacy policy occasionally. Any changes will be reflected in app updates. We will notify users of significant changes through the App Store update notes.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Contact Us</h2>
+                    <p>If you have questions about this privacy policy or our practices, please feel free to contact us through the App Store review section or by email. We value your feedback and concerns.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 iClassic Digital. All rights reserved.</p>
+            <p>Designed and developed by Kyle Lee</p>
+        </footer>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            // 隐藏所有语言内容
+            document.querySelectorAll('.lang-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // 移除所有按钮的活动状态
+            document.querySelectorAll('.language-selector button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // 显示选中的语言
+            document.getElementById('content-' + lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+            
+            // 更新页面标题和更新时间
+            if (lang === 'zh') {
+                document.getElementById('page-title').textContent = '隐私政策';
+                document.getElementById('last-updated').textContent = '最后更新：2025年12月';
+                document.documentElement.lang = 'zh-Hans';
+            } else {
+                document.getElementById('page-title').textContent = 'Privacy Policy';
+                document.getElementById('last-updated').textContent = 'Last Updated: December 2025';
+                document.documentElement.lang = 'en';
+            }
+        }
+    </script>
+</body>
+</html>
+
